@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do-to-list — Advanced Tasks</title>
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+ 
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <div class="header-left">
+        <h1 class="app-title">DailyEdge</h1>
+      </div>
+      <div class="header-center">
+        <input id="searchBox" class="search-input" placeholder="Search tasks..." aria-label="Search tasks" />
+      </div>
+      <div class="header-right">
+        <button id="themeToggle" class="btn-theme" aria-label="Toggle Dark Mode">🌙</button>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <nav class="sidebar">
+        <button class="filter-btn" data-filter="all" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="active" id="filterActive">Active</button>
+        <button class="filter-btn" data-filter="completed" id="filterCompleted">Completed
+           <i class="icon" class="fa-regular fa-circle-check "></i></button>
+      </nav>
+    </div>
+    <h1 class="welcome">Welcome Buddy !!</h1>
+    <div class="main-content2">
+    
+      <section class="task-area">
+        <section class="task-input-area" id="taskInputArea">
+          
+          <input id="taskText" class="task-input" placeholder="Add a task..." aria-label="Add a task" />
+          <input type="date" id="taskDate" class="task-date" aria-label="Task due date" />
+          <input type="time" id="taskTime" class="task-time" aria-label="Task due time" />
+          <select id="taskPriority" class="task-priority" aria-label="Task priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button id="addBtn" class="btn-add" aria-label="Add task">Add</button>
+        </section>
+
+        <ul id="taskList" class="task-list" aria-live="polite"></ul>
+
+        <footer class="app-footer">
+          <span id="countActive">0 active</span> • 
+          <button id="clearCompleted" class="btn-clear">Clear completed</button>
+        </footer>
+      </section>
+    </div>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --lightblue:#3373ff;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --priority-high: #dc2626;
+  --priority-medium: #f59e0b;
+  --priority-low: #10b981;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --muted: #94a3b8;
+  color: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  margin: 0;
+  padding: 24px;
+  color: inherit;
+  
+}
+
+.app-container {
+  margin-left: 200px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: -58px;
+  margin-left: -135px;
+  border-top-left-radius: 2px;
+}
+
+.header-left {
+  flex: 1 1 150px;
+  font-size: 30px;
+}
+
+.app-title {
+  margin-left: -90px;
+  font-size: 50px;
+  display: inline-block;
+  background-color: blue;
+  width: 350px;
+  height: 100px;
+  padding: 20px;
+  padding-left: 50px;
+  color: white;
+  margin-top: 34px;
+ 
+}
+
+.header-center {
+  flex: 2 1 300px;
+}
+
+.header-center .search-input {
+  width: 1000px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  height: 60px;
+  margin-left: -130px;
+  font-size: 20px;
+  padding-left: 50px;
+  margin-top: 30px;
+}
+
+.header-right {
+  flex: 0 0 50px;
+  text-align: right;
+}
+
+.btn-theme {
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+ padding-top: 30px;
+  color: inherit;
+
+}
+.main-content {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.main-content2 {
+  display: flex;
+  width: 89%;
+  margin-left: 140px;
+  margin-top: 30px;
+}
+.welcome{
+  display: flex;
+  margin-left: 150px;
+  margin-top: -630px;
+}
+/* Sidebar Filters */
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 150px;
+  margin-left: -225px;
+  margin-top: -30px;
+  background-color: blue;
+  width: 350px;
+  height: 637px;
+  padding-top: -30px;
+}
+.filter-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 8px 12px;
+  padding-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  color: inherit;
+  font-size: 20px;
+  color: white;
+  margin-top: 10px;
+}
+
+.filter-btn.active {
+  background: #eef2ff;
+  border-color: #dbeafe;
+  color: black;
+  opacity: 0.8;
+}
+
+.filter-btn:hover:not(.active) {
+  background: #ffffff;
+  color: black; 
+  opacity: 0.8;
+}
+i {
+   margin-left: 190px;
+   opacity: 0; 
+}
+
+
+
+/* Task area */
+.task-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: max-content;
+}
+
+/* Task input area */
+.task-input-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+
+.task-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  min-width: 120px;
+  font-size: 14px;
+  color: inherit;
+  background: var(--card);
+  width: 630px;
+  height: 60px;
+
+}
+.task-date,
+.task-time,
+.task-priority {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6edf3;
+  min-width: 120px;
+  font-size: 14px;
+  color: inherit;
+  background: var(--card);
+}
+
+.task-time {
+  max-width: 130px;
+}
+
+.btn-add {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.btn-add:hover {
+  background: #1d4ed8;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: var(--card);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #eef2f6;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task-text:hover {
+  cursor: text;
+}
+
+.task-meta {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.priority-high {
+  color: var(--priority-high);
+}
+
+.priority-medium {
+  color: var(--priority-medium);
+}
+
+.priority-low {
+  color: var(--priority-low);
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--danger);
+  transition: color 0.3s ease;
+}
+
+.action-btn:hover {
+  color: #b91c1c;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: right;
+  padding-top: 6px;
+  border-top: 1px solid #e6edf3;
+}
+.btn-clear{
+  width: 150px;
+  height: 25px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.btn-clear:hover{
+  cursor: pointer;
+  background-color: red;
+  transition: 0.5s;
+}
+.btn-clear:active{
+  box-shadow: 1px 1px 1px black;
+}
+/* Scrollbar for task list */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    min-width: auto;
+  }
+  .filter-btn {
+    flex: 1;
+    text-align: center;
+  }
+  .task-input-area {
+    justify-content: stretch;
+  }
+  .task-input,
+  .task-date,
+  .task-time,
+  .task-priority {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
